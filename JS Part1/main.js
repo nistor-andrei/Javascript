@@ -114,12 +114,12 @@ function pattern(width, height) {
   for (let i = 0; i < width; i++) {
     for (let j = 0 + i; j < height + i; j++) {
       if (j % 2 == 1) {
-        pattern = pattern + "1 ";
+        pattern += "1 ";
       } else if (j % 2 == 0) {
-        pattern = pattern + "0 ";
+        pattern += "0 ";
       }
     }
-    pattern = pattern + "\n";
+    pattern += "\n";
   }
   return pattern;
 }
