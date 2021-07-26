@@ -113,9 +113,9 @@ function pattern(width, height) {
   let pattern = "";
   for (let i = 0; i < width; i++) {
     for (let j = 0 + i; j < height + i; j++) {
-      if (j % 2 == 1) {
+      if (j % 2 === 1) {
         pattern += "1 ";
-      } else if (j % 2 == 0) {
+      } else if (j % 2 === 0) {
         pattern += "0 ";
       }
     }
