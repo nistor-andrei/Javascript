@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="container contact-form">
+      <div class="contact-form__message"></div>
+      <div class="contact">
+        <div class="contact__box">
+          <div class="contact__box-left">
+            <form action="" data-form>
+              <input type="text" placeholder="First Name" data-first-name name="firstName" />
+              <input type="text" placeholder="Last Name" data-last-name name="lastName" />
+              <label for="gender">Gender</label>
+              <div class="contact__m">
+                <input type="radio" id="m" data-genders value="M" name="gender" />
+                <label for="m">M</label>
+              </div>
+              <div class="contact__f">
+                <input type="radio" id="f" value="F" data-genders name="gender" />
+                <label for="f">F</label>
+              </div>
+              <textarea name="message" id="message" data-message placeholder="Your message here..." cols="30" rows="10"></textarea>
+              <button type="submit" data-form-submit>Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="contact__box-right">
+          <img src="img/markus-winkler-q3QPw37J6Xs-unsplash.jpg" alt="contact us" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
