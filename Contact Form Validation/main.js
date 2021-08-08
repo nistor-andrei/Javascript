@@ -16,37 +16,20 @@
     const textValue = e.target.elements.message.value;
     const popupMessage = document.querySelector('.contact-form__message');
 
-    if (firstNameValue.trim() === '' || firstNameValue.trim() === null) {
-      document.querySelector('[data-first-name]').style.border = '1px solid red';
-      return;
-    } else {
+    if (verifyFields(firstNameValue) && verifyFields(lastNameValue) && verifyFields(textValue) && verifyFields(gendersValue)) {
       document.querySelector('[data-first-name]').style.border = '1px solid #000';
-      getSuccesMessage();
-    }
-
-    if (lastNameValue.trim() === '' || lastNameValue.trim() === null) {
-      document.querySelector('[data-last-name]').style.border = '1px solid red';
-      return;
-    } else {
       document.querySelector('[data-last-name]').style.border = '1px solid #000';
-      getSuccesMessage();
-    }
-
-    if (textValue.trim() === '' || textValue.trim() === null) {
-      document.querySelector('[data-message]').style.border = '1px solid red';
-      return;
-    } else {
       document.querySelector('[data-message]').style.border = '1px solid #000';
-      getSuccesMessage();
-    }
-
-    if (gendersValue === '') {
-      document.querySelector('[data-genders]').style.border = '1px solid red';
-      return;
-    } else {
       document.querySelector('[data-genders]').style.border = '1px solid #000';
       getSuccesMessage();
+    } else {
+      document.querySelector('[data-first-name]').style.border = '1px solid red';
+      document.querySelector('[data-last-name]').style.border = '1px solid red';
+      document.querySelector('[data-message]').style.border = '1px solid red';
+      document.querySelector('[data-genders]').style.border = '1px solid red';
+      return false;
     }
+    // Success Message
     function getSuccesMessage() {
       popupMessage.style.display = 'flex';
       const icon = document.createElement('i');
@@ -65,6 +48,18 @@
     Gender : ${gendersValue},
     Message : ${textValue}
     `);
+    }
+
+    // Fields Verify
+    function verifyFields(input) {
+      const typeOfErrors = ['', null];
+      let response = true;
+      for (const error of typeOfErrors) {
+        if (error === input) {
+          response = false;
+        }
+      }
+      return response;
     }
   }
 })();
