@@ -60,3 +60,7 @@ form {
 .form-info input:focus {
   outline: none;
 }
+
+img {
+  display: none;
+}

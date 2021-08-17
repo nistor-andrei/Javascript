@@ -10,7 +10,7 @@ function handleSubmit(e) {
   e.preventDefault();
   const input = e.target.elements.city.value;
   const result = document.querySelector('[data-result]');
-  const img = document.createElement('img');
+  const img = document.querySelector('[data-weather-icon]');
   const box = document.querySelector('.weather-box');
 
   const details = document.querySelector('[data-details]');
@@ -18,6 +18,9 @@ function handleSubmit(e) {
   fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${input}&aqi=no`)
     .then((response) => response.json())
     .then((responseJson) => {
-      (result.innerText = responseJson.current.temp_c + ' °C'), box.append(img), (img.src = responseJson.current.condition.icon), (details.innerText = responseJson.current.condition.text);
+      result.innerText = responseJson.current.temp_c + ' °C';
+      img.style.display = 'inline';
+      img.src = responseJson.current.condition.icon;
+      details.innerText = responseJson.current.condition.text;
     });
 }
