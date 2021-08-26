@@ -11,8 +11,6 @@ function handleSubmit(e) {
   const input = e.target.elements.city.value;
   const result = document.querySelector('[data-result]');
   const img = document.querySelector('[data-weather-icon]');
-  const box = document.querySelector('.weather-box');
-
   const details = document.querySelector('[data-details]');
 
   fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${input}&aqi=no`)
