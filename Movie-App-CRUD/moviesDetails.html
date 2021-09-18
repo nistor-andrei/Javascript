@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Detail</title>
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="scripts/Model/movie.model.js"></script>
+    <script src="scripts/View/movieDetails.view.js" defer></script>
+    <script src="scripts/Controller/movieDetails.controller.js" defer></script>
+    <script src="scripts/Controller/movieAction.controller.js" defer></script>
+    <script src="scripts/Controller/editMovie.controller.js" defer></script>
+  </head>
+  <body>
+    <section class="container movie-details">
+      <div class="content">
+        <h1 data-title></h1>
+        <img data-movie-image src="" alt="" />
+        <ul data-genre-list></ul>
+        <p data-description></p>
+      </div>
+      <div class="action-button">
+        <button data-edit-movie class="imdb-button">Edit movie</button>
+        <button data-delete-movie class="imdb-button">Delete movie</button>
+      </div>
+    </section>
+    <section class="modal-section hidden"></section>
+    <div class="modal hidden">
+      <p>Do you really wanna added this movie in database?</p>
+      <div class="action-button">
+        <span class="true">Yes</span>
+        <span class="false">No</span>
+      </div>
+    </div>
+    <section class="form-edit container">
+      <form data-form-edit class="hidden"></form>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="scripts/Controller/createMovie.controller.js" defer></script>
+    <script src="scripts/Controller/auth.js" defer></script>
+  </head>
+  <body>
+    <section class="login container" data-section-login>
+      <div class="login-box">
+        <h2>Login</h2>
+        <form action="" data-form-register>
+          <div class="login-child">
+            <label for="user">Username</label>
+            <input type="text" id="user" name="user" autocomplete="username" />
+          </div>
+          <div class="login-child">
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" autocomplete="current-password" />
+          </div>
+          <div class="login-child">
+            <label for="retype-pass" data-register class="hidden">Retype Password</label>
+            <input type="password" class="hidden" id="retype-pass" name="retypePass" data-register autocomplete="current-password" />
+          </div>
+          <div>
+            <button type="submit" data-login>Login</button>
+            <button type="submit" class="hidden" data-register>Register</button>
+          </div>
+        </form>
+        <a href="" data-login="switch" class="switch-link">Register here</a>
+        <a href="" data-register="switch" class="switch-link">Login here</a>
+      </div>
+    </section>
+
+    <section class="create container hidden" data-create-access>
+      <h1>Complete the form and create your movie</h1>
+      <div class="container-form">
+        <form data-form>
+          <div class="child-form">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" />
+          </div>
+          <div class="child-form">
+            <label for="poster">Poster</label>
+            <input type="text" id="poster" name="poster" />
+          </div>
+          <div class="child-form">
+            <label for="year">Year</label>
+            <input type="text" id="year" name="year" />
+          </div>
+          <div class="child-form">
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" name="genre" />
+          </div>
+          <div class="child-form">
+            <label for="imdbid">ImdbID</label>
+            <input type="text" id="imdbid" name="imdbid" />
+          </div>
+          <div class="child-form">
+            <div class="child-form-ratings">
+              <p>Ratings</p>
+              <button data-rating-add class="imdb-button">Add Rating</button>
+              <button data-rating-remove class="imdb-button-second">Remove Rating</button>
+            </div>
+            <div data-new-rating>
+              <div class="child-form-ratings-div" data-form-rating>
+                <label for="source" data-source>Source</label>
+                <input type="text" id="source" name="source" data-source />
+                <label for="value" data-value>Rate</label>
+                <input type="text" id="value" name="rate" data-value />
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="imdb-button" data-create-movie>Create Movie</button>
+          <a href="movies.html?page=1" class="imdb-button-second">See the Movies</a>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

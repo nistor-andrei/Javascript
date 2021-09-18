@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie API</title>
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <script src="scripts/Model/movie.model.js"></script>
+    <script src="scripts/View/movie.view.js" defer></script>
+    <script src="scripts/Controller/movie.controller.js" defer></script>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <section class="container spacer" data-section>
+      <h1 class="main-title">Movies List</h1>
+      <div class="movies-list" data-movies></div>
+    </section>
+    <section class="pagination container">
+      <ul>
+        <li><a href="" data-prev-page>&lt;</a></li>
+        <li>Page: <span data-current-page></span></li>
+        <li><a href="" data-next-page>&gt;</a></li>
+      </ul>
+    </section>
+  </body>
+</html>
